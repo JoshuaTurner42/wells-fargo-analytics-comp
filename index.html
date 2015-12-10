@@ -1,42 +1,37 @@
-<!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
-  <link rel="stylesheet" href="stylesheets/github-dark.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Wells-fargo-analytics-comp : ">
 
-  <title>Wells-fargo-analytics-comp</title>
-  <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Wells-fargo-analytics-comp</title>
+  </head>
 
-</head>
+  <body>
 
-<body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/JoshuaTurner42/wells-fargo-analytics-comp">View on GitHub</a>
 
-  <div class="wrapper">
-    <header>
-      <h1 class="title">Wells-fargo-analytics-comp</h1>
-    </header>
-    <div id="container">
-      <p class="tagline"></p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://github.com/JoshuaTurner42/wells-fargo-analytics-comp/tarball/master" class="download-button tar"><span>Download</span></a>
-          <a href="https://github.com/JoshuaTurner42/wells-fargo-analytics-comp/zipball/master" class="download-button zip"><span>Download</span></a>
-          <a href="https://github.com/JoshuaTurner42/wells-fargo-analytics-comp" class="code">View Wells-fargo-analytics-comp on GitHub</a>
-        </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          <h1>
+          <h1 id="project_title">Wells-fargo-analytics-comp</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/JoshuaTurner42/wells-fargo-analytics-comp/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/JoshuaTurner42/wells-fargo-analytics-comp/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
 <a id="topics" class="anchor" href="#topics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Topics</h1>
 
 <h2>
@@ -44,6 +39,321 @@
 
 <h2>
 <a id="code" class="anchor" href="#code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code</h2>
+
+<h3>
+<a id="python-code" class="anchor" href="#python-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python Code</h3>
+
+<div class="highlight highlight-source-abl"><pre># coded by: Joshua Turner
+
+def <span class="pl-c1"><span class="pl-c1">main</span></span>():
+    <span class="pl-c1"><span class="pl-c1">banksort</span></span>()
+    <span class="pl-c1"><span class="pl-c1">accountsort</span></span>()
+    <span class="pl-c1"><span class="pl-c1">creditsort</span></span>()
+    <span class="pl-c1"><span class="pl-c1">financesort</span></span>()
+    <span class="pl-c1"><span class="pl-c1">servicesort</span></span>()
+
+def <span class="pl-c1"><span class="pl-c1">banksort</span></span>():
+    <span class="pl-s">"<span class="pl-cce">""</span></span>
+<span class="pl-s">    This function reads the contents of a text file, scans for BankA,B,C,D,</span>
+<span class="pl-s">    and writes the list item to the appropriate output</span>
+<span class="pl-s">    file. </span>
+<span class="pl-s">    <span class="pl-cce">""</span>"</span>
+    infileName <span class="pl-k">=</span> <span class="pl-s">"DataSet.txt"</span>
+    infile <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(infileName<span class="pl-k">,</span> <span class="pl-s">"rb"</span>)
+    bankAoutfile <span class="pl-k">=</span> <span class="pl-s">"bankA.txt"</span>
+    bankBoutfile <span class="pl-k">=</span> <span class="pl-s">"bankB.txt"</span>
+    bankCoutfile <span class="pl-k">=</span> <span class="pl-s">"bankC.txt"</span>
+    bankDoutfile <span class="pl-k">=</span> <span class="pl-s">"bankD.txt"</span>
+    outfileA <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(bankAoutfile<span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    outfileB <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(bankBoutfile<span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    outfileC <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(bankCoutfile<span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    outfileD <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(bankDoutfile<span class="pl-k">,</span> <span class="pl-s">"w"</span>)    
+    <span class="pl-k">for</span> line in infile:
+        <span class="pl-k">if</span> b<span class="pl-s">"BankA"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>outfileA)
+        elif b<span class="pl-s">"BankB"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>outfileB)
+        elif b<span class="pl-s">"BankC"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>outfileC)
+        elif b<span class="pl-s">"BankD"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>outfileD)
+
+    infile<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    outfileA<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    outfileB<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    outfileC<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    outfileD<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+
+def <span class="pl-c1"><span class="pl-c1">accountsort</span></span>():
+    <span class="pl-s">"<span class="pl-cce">""</span></span>
+<span class="pl-s">    This function reads the contents of the sorted bank files (A,B,C,D), scans</span>
+<span class="pl-s">    for the word 'account' and writes to the appropriate output file.</span>
+<span class="pl-s">    <span class="pl-cce">""</span>"</span>
+    infileA <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"bankA.txt"</span><span class="pl-k">,</span> <span class="pl-s">"rb"</span>)
+    infileB <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"bankB.txt"</span><span class="pl-k">,</span> <span class="pl-s">"rb"</span>)
+    infileC <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"bankC.txt"</span><span class="pl-k">,</span> <span class="pl-s">"rb"</span>)
+    infileD <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"bankD.txt"</span><span class="pl-k">,</span> <span class="pl-s">"rb"</span>)
+    accountoutA <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"accountA.txt"</span><span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    accountoutB <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"accountB.txt"</span><span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    accountoutC <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"accountC.txt"</span><span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    accountoutD <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"accountD.txt"</span><span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    <span class="pl-k">for</span> line in infileA:
+        <span class="pl-k">if</span> b<span class="pl-s">"account"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>accountoutA)
+    <span class="pl-k">for</span> line in infileB:
+        <span class="pl-k">if</span> b<span class="pl-s">"account"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>accountoutB)
+    <span class="pl-k">for</span> line in infileC:
+        <span class="pl-k">if</span> b<span class="pl-s">"account"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>accountoutC)
+    <span class="pl-k">for</span> line in infileD:
+        <span class="pl-k">if</span> b<span class="pl-s">"account"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>accountoutD)
+
+    infileA<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    infileB<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    infileC<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    infileD<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    accountoutA<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    accountoutB<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    accountoutC<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    accountoutD<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+
+def <span class="pl-c1"><span class="pl-c1">creditsort</span></span>():
+    <span class="pl-s">"<span class="pl-cce">""</span></span>
+<span class="pl-s">    This function reads the contents of the sorted bank files (A,B,C,D), scans</span>
+<span class="pl-s">    for the word 'credit' and writes to the appropriate output file.</span>
+<span class="pl-s">    <span class="pl-cce">""</span>"</span>
+    infileA <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"bankA.txt"</span><span class="pl-k">,</span> <span class="pl-s">"rb"</span>)
+    infileB <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"bankB.txt"</span><span class="pl-k">,</span> <span class="pl-s">"rb"</span>)
+    infileC <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"bankC.txt"</span><span class="pl-k">,</span> <span class="pl-s">"rb"</span>)
+    infileD <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"bankD.txt"</span><span class="pl-k">,</span> <span class="pl-s">"rb"</span>)
+    creditoutA <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"creditA.txt"</span><span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    creditoutB <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"creditB.txt"</span><span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    creditoutC <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"creditC.txt"</span><span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    creditoutD <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"creditD.txt"</span><span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    <span class="pl-k">for</span> line in infileA:
+        <span class="pl-k">if</span> b<span class="pl-s">"credit"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>creditoutA)
+    <span class="pl-k">for</span> line in infileB:
+        <span class="pl-k">if</span> b<span class="pl-s">"credit"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>creditoutB)
+    <span class="pl-k">for</span> line in infileC:
+        <span class="pl-k">if</span> b<span class="pl-s">"credit"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>creditoutC)
+    <span class="pl-k">for</span> line in infileD:
+        <span class="pl-k">if</span> b<span class="pl-s">"credit"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>creditoutD)
+
+    infileA<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    infileB<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    infileC<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    infileD<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    creditoutA<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    creditoutB<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    creditoutC<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    creditoutD<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+
+def <span class="pl-c1"><span class="pl-c1">financesort</span></span>():
+    <span class="pl-s">"<span class="pl-cce">""</span></span>
+<span class="pl-s">    This function reads the contents of the sorted bank files (A,B,C,D), scans</span>
+<span class="pl-s">    for the word 'finance' and writes to the appropriate output file.</span>
+<span class="pl-s">    <span class="pl-cce">""</span>"</span>
+    infileA <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"bankA.txt"</span><span class="pl-k">,</span> <span class="pl-s">"rb"</span>)
+    infileB <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"bankB.txt"</span><span class="pl-k">,</span> <span class="pl-s">"rb"</span>)
+    infileC <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"bankC.txt"</span><span class="pl-k">,</span> <span class="pl-s">"rb"</span>)
+    infileD <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"bankD.txt"</span><span class="pl-k">,</span> <span class="pl-s">"rb"</span>)
+    financeoutA <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"financeA.txt"</span><span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    financeoutB <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"financeB.txt"</span><span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    financeoutC <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"financeC.txt"</span><span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    financeoutD <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"financeD.txt"</span><span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    <span class="pl-k">for</span> line in infileA:
+        <span class="pl-k">if</span> b<span class="pl-s">"finance"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>financeoutA)
+    <span class="pl-k">for</span> line in infileB:
+        <span class="pl-k">if</span> b<span class="pl-s">"finance"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>financeoutB)
+    <span class="pl-k">for</span> line in infileC:
+        <span class="pl-k">if</span> b<span class="pl-s">"finance"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>financeoutC)
+    <span class="pl-k">for</span> line in infileD:
+        <span class="pl-k">if</span> b<span class="pl-s">"finance"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>financeoutD)
+
+    infileA<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    infileB<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    infileC<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    infileD<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    financeoutA<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    financeoutB<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    financeoutC<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    financeoutD<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+
+def <span class="pl-c1"><span class="pl-c1">servicesort</span></span>():
+    <span class="pl-s">"<span class="pl-cce">""</span></span>
+<span class="pl-s">    This function reads the contents of the sorted bank files (A,B,C,D), scans</span>
+<span class="pl-s">    for the word 'service' and writes to the appropriate output file.</span>
+<span class="pl-s">    <span class="pl-cce">""</span>"</span>
+    infileA <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"bankA.txt"</span><span class="pl-k">,</span> <span class="pl-s">"rb"</span>)
+    infileB <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"bankB.txt"</span><span class="pl-k">,</span> <span class="pl-s">"rb"</span>)
+    infileC <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"bankC.txt"</span><span class="pl-k">,</span> <span class="pl-s">"rb"</span>)
+    infileD <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"bankD.txt"</span><span class="pl-k">,</span> <span class="pl-s">"rb"</span>)
+    serviceoutA <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"serviceA.txt"</span><span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    serviceoutB <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"serviceB.txt"</span><span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    serviceoutC <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"serviceC.txt"</span><span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    serviceoutD <span class="pl-k">=</span> <span class="pl-c1"><span class="pl-c1">open</span></span>(<span class="pl-s">"serviceD.txt"</span><span class="pl-k">,</span> <span class="pl-s">"w"</span>)
+    <span class="pl-k">for</span> line in infileA:
+        <span class="pl-k">if</span> b<span class="pl-s">"service"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>serviceoutA)
+    <span class="pl-k">for</span> line in infileB:
+        <span class="pl-k">if</span> b<span class="pl-s">"service"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>serviceoutB)
+    <span class="pl-k">for</span> line in infileC:
+        <span class="pl-k">if</span> b<span class="pl-s">"service"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>serviceoutC)
+    <span class="pl-k">for</span> line in infileD:
+        <span class="pl-k">if</span> b<span class="pl-s">"service"</span> in line:
+            <span class="pl-c1"><span class="pl-c1">print</span></span>(line<span class="pl-k">,</span> file<span class="pl-k">=</span>serviceoutD)
+
+    infileA<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    infileB<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    infileC<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    infileD<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    serviceoutA<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    serviceoutB<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    serviceoutC<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+    serviceoutD<span class="pl-k">.</span><span class="pl-c1"><span class="pl-c1">close</span></span>()
+
+<span class="pl-c1"><span class="pl-c1">main</span></span>()</pre></div>
+
+<h3>
+<a id="r-code" class="anchor" href="#r-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>R Code</h3>
+
+<div class="highlight highlight-source-r"><pre><span class="pl-c">## Well's Fargo FB/Twitter data competition</span>
+<span class="pl-c">## reference: https://rstudio-pubs-static.s3.amazonaws.com/31867_8236987cf0a8444e962ccd2aec46d9c3.html</span>
+<span class="pl-c">## reference: http://www.inside-r.org/howto/mining-twitter-airline-consumer-sentiment</span>
+<span class="pl-c">## coded by: Joshua Turner </span>
+
+library(<span class="pl-smi">plyr</span>)
+library(<span class="pl-smi">stringr</span>)
+library(<span class="pl-smi">ggplot2</span>)
+library(<span class="pl-smi">tm</span>)
+library(<span class="pl-smi">rpart</span>)
+
+<span class="pl-c"># Hu and Liu's "opinion lexicon," categorizes words as positive or negative</span>
+<span class="pl-c"># found at http://www.cs.uic.edu/~liub/FBS/opinion-lexicon-English.rar</span>
+<span class="pl-v">hu.liu.pos</span> <span class="pl-k">=</span> scan(<span class="pl-s"><span class="pl-pds">'</span>~/positive-words.txt<span class="pl-pds">'</span></span>,
+                  <span class="pl-v">what</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>character<span class="pl-pds">'</span></span>, <span class="pl-v">comment.char</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>;<span class="pl-pds">'</span></span>)
+<span class="pl-v">hu.liu.neg</span> <span class="pl-k">=</span> scan(<span class="pl-s"><span class="pl-pds">'</span>~/negative-words.txt<span class="pl-pds">'</span></span>,
+                  <span class="pl-v">what</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>character<span class="pl-pds">'</span></span>, <span class="pl-v">comment.char</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>;<span class="pl-pds">'</span></span>)
+<span class="pl-v">pos.words</span> <span class="pl-k">=</span> c(<span class="pl-smi">hu.liu.pos</span>, <span class="pl-s"><span class="pl-pds">'</span>upgrade<span class="pl-pds">'</span></span>)
+<span class="pl-v">neg.words</span> <span class="pl-k">=</span> c(<span class="pl-smi">hu.liu.neg</span>, <span class="pl-s"><span class="pl-pds">'</span>wtf<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>wait<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>waiting<span class="pl-pds">'</span></span>,
+              <span class="pl-s"><span class="pl-pds">'</span>epicfail<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>mechanical<span class="pl-pds">'</span></span>)
+<span class="pl-c"># score.sentiment() function uses laply() to iterate through the input text. </span>
+<span class="pl-c"># It strips punctuation and control characters from each line using R’s regular </span>
+<span class="pl-c"># expression-powered substitution function, gsub(), and uses match() against </span>
+<span class="pl-c"># each word list to find matches; taken from</span>
+<span class="pl-c"># http://www.inside-r.org/howto/mining-twitter-airline-consumer-sentiment</span>
+<span class="pl-v">score.sentiment</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(<span class="pl-smi">sentences</span>, <span class="pl-smi">pos.words</span>, <span class="pl-smi">neg.words</span>, <span class="pl-v">.progress</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>none<span class="pl-pds">'</span></span>)
+{
+  require(<span class="pl-smi">plyr</span>)
+  require(<span class="pl-smi">stringr</span>)
+
+  <span class="pl-c"># we got a vector of sentences. plyr will handle a list</span>
+  <span class="pl-c"># or a vector as an "l" for us</span>
+  <span class="pl-c"># we want a simple array of scores back, so we use</span>
+  <span class="pl-c"># "l" + "a" + "ply" = "laply":</span>
+  <span class="pl-v">scores</span> <span class="pl-k">=</span> laply(<span class="pl-smi">sentences</span>, <span class="pl-k">function</span>(<span class="pl-smi">sentence</span>, <span class="pl-smi">pos.words</span>, <span class="pl-smi">neg.words</span>) {
+
+    <span class="pl-c"># clean up sentences with R's regex-driven global substitute, gsub():</span>
+    <span class="pl-v">sentence</span> <span class="pl-k">=</span> gsub(<span class="pl-s"><span class="pl-pds">'</span>[[:punct:]]<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>, <span class="pl-smi">sentence</span>)
+    <span class="pl-v">sentence</span> <span class="pl-k">=</span> gsub(<span class="pl-s"><span class="pl-pds">'</span>[[:cntrl:]]<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>, <span class="pl-smi">sentence</span>)
+    <span class="pl-v">sentence</span> <span class="pl-k">=</span> gsub(<span class="pl-s"><span class="pl-pds">'</span><span class="pl-cce">\\</span>d+<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>, <span class="pl-smi">sentence</span>)
+    <span class="pl-c"># and convert to lower case:</span>
+    <span class="pl-v">sentence</span> <span class="pl-k">=</span> tolower(<span class="pl-smi">sentence</span>)
+
+    <span class="pl-c"># split into words. str_split is in the stringr package</span>
+    <span class="pl-v">word.list</span> <span class="pl-k">=</span> str_split(<span class="pl-smi">sentence</span>, <span class="pl-s"><span class="pl-pds">'</span><span class="pl-cce">\\</span>s+<span class="pl-pds">'</span></span>)
+    <span class="pl-c"># sometimes a list() is one level of hierarchy too much</span>
+    <span class="pl-v">words</span> <span class="pl-k">=</span> unlist(<span class="pl-smi">word.list</span>)
+
+    <span class="pl-c"># compare our words to the dictionaries of positive &amp; negative terms</span>
+    <span class="pl-v">pos.matches</span> <span class="pl-k">=</span> match(<span class="pl-smi">words</span>, <span class="pl-smi">pos.words</span>)
+    <span class="pl-v">neg.matches</span> <span class="pl-k">=</span> match(<span class="pl-smi">words</span>, <span class="pl-smi">neg.words</span>)
+
+    <span class="pl-c"># match() returns the position of the matched term or NA</span>
+    <span class="pl-c"># we just want a TRUE/FALSE:</span>
+    <span class="pl-v">pos.matches</span> <span class="pl-k">=</span> <span class="pl-k">!</span>is.na(<span class="pl-smi">pos.matches</span>)
+    <span class="pl-v">neg.matches</span> <span class="pl-k">=</span> <span class="pl-k">!</span>is.na(<span class="pl-smi">neg.matches</span>)
+
+    <span class="pl-c"># and conveniently enough, TRUE/FALSE will be treated as 1/0 by sum():</span>
+    <span class="pl-v">score</span> <span class="pl-k">=</span> sum(<span class="pl-smi">pos.matches</span>) <span class="pl-k">-</span> sum(<span class="pl-smi">neg.matches</span>)
+
+    <span class="pl-k">return</span>(<span class="pl-smi">score</span>)
+  }, <span class="pl-smi">pos.words</span>, <span class="pl-smi">neg.words</span>, <span class="pl-v">.progress</span><span class="pl-k">=</span>.<span class="pl-smi">progress</span> )
+
+  <span class="pl-v">scores.df</span> <span class="pl-k">=</span> <span class="pl-k">data.frame</span>(<span class="pl-v">score</span><span class="pl-k">=</span><span class="pl-smi">scores</span>, <span class="pl-v">text</span><span class="pl-k">=</span><span class="pl-smi">sentences</span>)
+  <span class="pl-k">return</span>(<span class="pl-smi">scores.df</span>)
+}
+
+
+<span class="pl-c"># used to get entire data set</span>
+<span class="pl-smi">cname</span> <span class="pl-k">&lt;-</span> <span class="pl-s"><span class="pl-pds">"</span>~/BankDataSet<span class="pl-pds">"</span></span>
+<span class="pl-smi">cname</span>   
+dir(<span class="pl-smi">cname</span>)
+
+<span class="pl-c"># creates a subset of 10000 to work</span>
+setwd(<span class="pl-s"><span class="pl-pds">"</span>~/BankDataSet<span class="pl-pds">"</span></span>)
+<span class="pl-v">df</span> <span class="pl-k">=</span> read.csv(<span class="pl-s"><span class="pl-pds">"</span>DataSet.txt<span class="pl-pds">"</span></span>)
+<span class="pl-v">idx.10000</span> <span class="pl-k">=</span> sample(<span class="pl-c1">1</span><span class="pl-k">:</span>nrow(<span class="pl-smi">df</span>), <span class="pl-c1">10000</span>)
+<span class="pl-v">df.10000</span> <span class="pl-k">=</span> <span class="pl-smi">df</span>[<span class="pl-smi">idx.10000</span>,]
+<span class="pl-v">df.entire</span> <span class="pl-k">=</span> <span class="pl-smi">df</span>
+<span class="pl-v">df</span> <span class="pl-k">=</span> <span class="pl-smi">df.10000</span>
+<span class="pl-smi">docs</span> <span class="pl-k">&lt;-</span> Corpus(DirSource(<span class="pl-smi">cname</span>))
+
+<span class="pl-c"># finds sentiment score for whole data set</span>
+<span class="pl-v">bank.scores</span> <span class="pl-k">=</span> score.sentiment(<span class="pl-smi">df</span>, <span class="pl-smi">pos.words</span>,
+                              <span class="pl-smi">neg.words</span>, <span class="pl-v">.progress</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>text<span class="pl-pds">'</span></span>)
+<span class="pl-c"># formats data for word frequency count</span>
+summary(<span class="pl-smi">docs</span>)
+<span class="pl-smi">docs</span> <span class="pl-k">&lt;-</span> tm_map(<span class="pl-smi">docs</span>, <span class="pl-smi">removePunctuation</span>)
+<span class="pl-smi">docs</span> <span class="pl-k">&lt;-</span> tm_map(<span class="pl-smi">docs</span>, <span class="pl-smi">removeWords</span>, stopwords(<span class="pl-s"><span class="pl-pds">"</span>english<span class="pl-pds">"</span></span>))
+<span class="pl-smi">docs</span> <span class="pl-k">&lt;-</span> tm_map(<span class="pl-smi">docs</span>, <span class="pl-smi">removeWords</span>, c(<span class="pl-s"><span class="pl-pds">"</span>Name<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>ADDRESS<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>PHONE<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>INTERNET<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>twit_hndl<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>get<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>got<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>let<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>number<span class="pl-pds">"</span></span>))
+<span class="pl-smi">docs</span> <span class="pl-k">&lt;-</span> tm_map(<span class="pl-smi">docs</span>, <span class="pl-smi">PlainTextDocument</span>)   
+<span class="pl-smi">dtm</span> <span class="pl-k">&lt;-</span> DocumentTermMatrix(<span class="pl-smi">docs</span>)   
+<span class="pl-smi">dtm</span> 
+inspect(<span class="pl-smi">dtm</span>)
+<span class="pl-smi">tdm</span> <span class="pl-k">&lt;-</span> TermDocumentMatrix(<span class="pl-smi">docs</span>)   
+<span class="pl-smi">tdm</span>
+<span class="pl-smi">freq</span> <span class="pl-k">&lt;-</span> colSums(as.matrix(<span class="pl-smi">dtm</span>))   
+length(<span class="pl-smi">freq</span>)   
+<span class="pl-smi">ord</span> <span class="pl-k">&lt;-</span> order(<span class="pl-smi">freq</span>)   
+<span class="pl-smi">dtms</span> <span class="pl-k">&lt;-</span> removeSparseTerms(<span class="pl-smi">dtm</span>, <span class="pl-c1">0.1</span>) <span class="pl-c"># This makes a matrix that is 10% empty space, maximum.</span>
+<span class="pl-smi">freq</span>[head(<span class="pl-smi">ord</span>)]
+<span class="pl-smi">freq</span>[tail(<span class="pl-smi">ord</span>)]
+head(table(<span class="pl-smi">freq</span>), <span class="pl-c1">20</span>)
+tail(table(<span class="pl-smi">freq</span>), <span class="pl-c1">20</span>)
+<span class="pl-smi">wf</span> <span class="pl-k">&lt;-</span> <span class="pl-k">data.frame</span>(<span class="pl-v">word</span><span class="pl-k">=</span>names(<span class="pl-smi">freq</span>), <span class="pl-v">freq</span><span class="pl-k">=</span><span class="pl-smi">freq</span>)   
+head(<span class="pl-smi">wf</span>)
+<span class="pl-c"># creates plot of word frequency, shows only words that appear at least 3000 times</span>
+<span class="pl-smi">p</span> <span class="pl-k">&lt;-</span> ggplot(subset(<span class="pl-smi">wf</span>, <span class="pl-smi">freq</span><span class="pl-k">&gt;</span><span class="pl-c1">3000</span>), aes(<span class="pl-smi">word</span>, <span class="pl-smi">freq</span>))    
+<span class="pl-smi">p</span> <span class="pl-k">&lt;-</span> <span class="pl-smi">p</span> <span class="pl-k">+</span> geom_bar(<span class="pl-v">stat</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>identity<span class="pl-pds">"</span></span>)   
+<span class="pl-smi">p</span> <span class="pl-k">&lt;-</span> <span class="pl-smi">p</span> <span class="pl-k">+</span> theme(<span class="pl-v">axis.text.x</span><span class="pl-k">=</span>element_text(<span class="pl-v">angle</span><span class="pl-k">=</span><span class="pl-c1">45</span>, <span class="pl-v">hjust</span><span class="pl-k">=</span><span class="pl-c1">1</span>))   
+<span class="pl-smi">p</span>   
+<span class="pl-c"># the code below was repeated for each bank and for each chosen word for each bank (total 16)</span>
+<span class="pl-v">dfA</span> <span class="pl-k">=</span> read.csv2(<span class="pl-s"><span class="pl-pds">"</span>BankA.txt<span class="pl-pds">"</span></span>)
+<span class="pl-v">idx</span> <span class="pl-k">=</span> sample(<span class="pl-c1">1</span><span class="pl-k">:</span>nrow(<span class="pl-smi">dfA</span>),<span class="pl-c1">64249</span>)
+<span class="pl-v">dfA.entire</span> <span class="pl-k">=</span> <span class="pl-smi">dfA</span>
+<span class="pl-v">dfA</span> <span class="pl-k">=</span> <span class="pl-smi">dfA</span>[<span class="pl-smi">idx</span>,]
+
+<span class="pl-v">bankA.scores</span> <span class="pl-k">=</span> score.sentiment(<span class="pl-smi">dfA</span>, <span class="pl-smi">pos.words</span>,
+                              <span class="pl-smi">neg.words</span>, <span class="pl-v">.progress</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>text<span class="pl-pds">'</span></span>)
+
+<span class="pl-smi">bankA.scores</span><span class="pl-k">$</span><span class="pl-v">bank</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>BankA<span class="pl-pds">'</span></span>
+<span class="pl-smi">bankA.scores</span><span class="pl-k">$</span><span class="pl-v">code</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>BA<span class="pl-pds">'</span></span>
+
+
+qplot(<span class="pl-smi">bankA.scores</span><span class="pl-k">$</span><span class="pl-smi">score</span>, <span class="pl-v">binwidth</span> <span class="pl-k">=</span> <span class="pl-c1">1</span>)</pre></div>
 
 <h2>
 <a id="results" class="anchor" href="#results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results</h2>
@@ -72,26 +382,18 @@
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
 <p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
-        </article>
-      </div>
+      </section>
     </div>
-    <footer>
-      <div class="owner">
-      <p><a href="https://github.com/JoshuaTurner42" class="avatar"><img src="https://avatars3.githubusercontent.com/u/16107554?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/JoshuaTurner42">JoshuaTurner42</a> maintains <a href="https://github.com/JoshuaTurner42/wells-fargo-analytics-comp">Wells-fargo-analytics-comp</a></p>
 
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Wells-fargo-analytics-comp maintained by <a href="https://github.com/JoshuaTurner42">JoshuaTurner42</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
 
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
-    </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <a href="https://github.com/JoshuaTurner42/wells-fargo-analytics-comp/tarball/master" class="tar">tar</a><a href="https://github.com/JoshuaTurner42/wells-fargo-analytics-comp/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
-    <p class="name"></p>
-  </div>
+    
 
-  
-</body>
+  </body>
 </html>
