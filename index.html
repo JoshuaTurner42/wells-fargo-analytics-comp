@@ -1,56 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640">
-
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
     <title>Wells-fargo-analytics-comp by JoshuaTurner42</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
-
   <body>
-    <a id="forkme_banner" href="https://github.com/JoshuaTurner42/wells-fargo-analytics-comp">View on GitHub</a>
-    <div class="shell">
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/JoshuaTurner42/wells-fargo-analytics-comp">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/JoshuaTurner42/wells-fargo-analytics-comp/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/JoshuaTurner42/wells-fargo-analytics-comp/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>Wells-fargo-analytics-comp</h1>
-            <h2></h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
+    <div class="wrapper">
 
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/JoshuaTurner42/wells-fargo-analytics-comp/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/JoshuaTurner42/wells-fargo-analytics-comp/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
+      <section>
+        <div id="title">
+          <h1>Wells-fargo-analytics-comp</h1>
+          <p></p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/JoshuaTurner42">JoshuaTurner42</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
 
-
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
         <h1>
 <a id="topics" class="anchor" href="#topics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Topics</h1>
 
 <h2>
 <a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>Wells Fargo set up and sponsored a data analysis competition between participants from several different schools. Participants were given a large data set of over 200,000 Twitter and Facebook posts to process and analyze using data analytic techniques. The following deliverables were also provided as goals.</p>
+
+<p>Deliverable A - Describe your Approach and Methodology. Include a visual representation of your analytic process flow.
+Deliverable B - Discuss the data and its relationship to social conversation drivers.
+Deliverable C - Document your code and reference the analytic process flow-diagram from deliverable A. 
+Deliverable D - Create a list of topics and substance you found </p>
 
 <h2>
 <a id="approach-and-methodology" class="anchor" href="#approach-and-methodology" aria-hidden="true"><span class="octicon octicon-link"></span></a>Approach and Methodology</h2>
@@ -75,7 +74,7 @@
 <p>Bank D overall sentiment score
 <img src="http://i.imgur.com/upwqZS1.png" alt="Bank D overall sentiment score"></p>
 
-<p>More charts like the one above were done for the overall sentiment score of each bank, and for each of our chosen words (account, finance, credit, and service) for each bank for a total of 16.</p>
+<p>More charts like those above were done for each of our chosen words (account, finance, credit, and service) for each bank for a total of 16.</p>
 
 <h2>
 <a id="code" class="anchor" href="#code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code</h2>
@@ -397,22 +396,27 @@ qplot(<span class="pl-smi">bankA.scores</span><span class="pl-k">$</span><span c
 
 <h2>
 <a id="results" class="anchor" href="#results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results</h2>
+
+<p>he overall sentiment levels for Banks A, B, C, D were fairly symmetrical, which was fairly surprising. We anticipated more variance within the sentiment levels of each of the banks, but, we came to find that all the banks in the overall sentiment level test were almost symmetric, or even a little skewed to the left. To our surprise, bank customers within the given data had an overall fair balance between positive and negative feedback via Facebook and Twitter. Bank D appeared to be the most symmetric of the banks in the overall sentiment level test comparison. But, there was not any drastic distinguishing jumps between the overall sentiment level comparisons worth noting. As aforementioned, although all banks appeared fairly symmetric, with a closer look, we saw there was a slight skewing to the left in all banks, but hardly enough to notice at first glance. This tells us that although all banks had quite a bit of both negative and positive feedback (fairly symmetric), the positive feedback won in the end by just nudge, which led the graphs to be slightly skewed left.</p>
+
+<p>We then decided to take it another step further and compare specific popular keywords between banks. Based on which words had the highest frequencies, we decided to take a closer look at 4 popular words that were most frequently used in the data set and also, in our opinion, were the most potentially controversial: Service, Finance, Credit, and Account. </p>
+
+<p>While comparing the word, “Account”, we saw that Bank A to Bank B were relateable, as were Bank C to Bank D. Bank A to B were both fairly symmetric with a slight left skew, which meant a slight surplus of positive feedback to barely outweigh the negative feedback. There appeared to be lots of neutral feedback for Bank A and B, with a majority of the data falling near the 0, or neutral mark. </p>
+
+<p>While comparing the word, “Credit”, we saw a lot more positive than we anticipated. All the banks were fairly symmetric with a slight skewing to the left, but banks A, B, and D, were most comparable. They had a majority of the data to the right of the nuertal 0 mark, meaning there was a majority of positive feedback in comparison to the negative feedback for the word, “credit”. Everyone loves a good credit score at these banks! </p>
+
+<p>While comparing the word, “Finance”, we saw a similar trend as before, fairly symmetric across the board, with a slight skewing to the left. The positive feedback seems to always win just barely in the end. In the “Finance” observation, Bank A caught our attention. Yes, Bank A was symmetric and slightly skewed left just like the others, but it was visibly different than the others. A majority of the data in Bank A comparison of the word “Finance” was abnormally neutral compared to the others. Nearly all the data fell close to the 0 neutral mark; it lacked the typical variance that we were starting to anticipate. Bank A customers must have been feeling particularly impartial overall with their financial obligations. </p>
+
+<p>While comparing the word, “Service”, we again saw a similar trend with the symmetry and the slight skewing to the left. In the “Service” comparison, we saw that the data had quite a bit of variance than the other comparisons. The other sentiment word comparisons were typically heavily weighed to the middle and then dropped off into a steep slope. But, across the entire board with the “Service” comparison, the drop off from the neutral mark, where most of the data still lied, the drop off was not as drastic. The positive and negative feedback was right there to break the fall and have a much smoother descent. This is interesting because this particular word showed the most variance out of any words we tested, the most controversial word apparently. It had lots of neutral comments, but it still had quite a lot of positive and negative comments or tweets to really create a widespread controversial word in the data set. </p>
+
+<h2>
+<a id="other-possibilities" class="anchor" href="#other-possibilities" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other Possibilities</h2>
+
+<p>If we were to continue the analysis of the data beyond what we've already done, we could convert the frequency histograms to graphs of percentages and use them for statistical comparisons between the different banks. Additionally, any word of interest could be used in the same way as our chosen words, and even combinations of words. We could search through the data for particular words in a particular order then combine them with an underscore into one term thereby allowing easier processing for our other algorithms.</p>
       </section>
 
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/JoshuaTurner42">JoshuaTurner42</a> can be found on <a href="https://github.com/JoshuaTurner42/wells-fargo-analytics-comp">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
-      </footer>
-
     </div>
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
   </body>
 </html>
