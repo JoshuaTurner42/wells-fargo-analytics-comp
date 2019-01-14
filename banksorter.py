@@ -1,4 +1,5 @@
 # coded by: Joshua Turner
+# Helper program used to sort initial data file into more manageable files
 
 def main():
     banksort()
@@ -11,7 +12,7 @@ def banksort():
     """
     This function reads the contents of a text file, scans for BankA,B,C,D,
     and writes the list item to the appropriate output
-    file. 
+    file.
     """
     infileName = "DataSet.txt"
     infile = open(infileName, "rb")
@@ -22,7 +23,7 @@ def banksort():
     outfileA = open(bankAoutfile, "w")
     outfileB = open(bankBoutfile, "w")
     outfileC = open(bankCoutfile, "w")
-    outfileD = open(bankDoutfile, "w")    
+    outfileD = open(bankDoutfile, "w")
     for line in infile:
         if b"BankA" in line:
             print(line, file=outfileA)
@@ -178,6 +179,5 @@ def servicesort():
     serviceoutB.close()
     serviceoutC.close()
     serviceoutD.close()
-       
-main()
 
+main()
